@@ -9,7 +9,6 @@ const schema = new mongoose.Schema({
   occupation: {
     type: String,
     default: 'unknown',
-    required: true,
   },
   catchPhrase: {
     type: String,
