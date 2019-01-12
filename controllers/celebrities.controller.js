@@ -16,7 +16,6 @@ module.exports.doCreate = (req, res, next) => {
   .then((celebrity) => {
     res.redirect('/celebrities')
   });
-
 };
 
 module.exports.get = (req, res, next) => {

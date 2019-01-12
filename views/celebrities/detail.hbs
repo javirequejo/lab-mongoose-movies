@@ -1,0 +1,7 @@
+<h1>{{ celebrity.name }}</h1>
+
+<a href="/celebrities">Back to list</a>
+
+<form action="/celebrities/{{celebrity._id}}/delete" method="post">
+  <button type="submit">Delete</button>
+</form>
