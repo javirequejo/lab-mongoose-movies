@@ -14,5 +14,10 @@ const schema = new mongoose.Schema({
   catchPhrase: {
     type: String,
     required: true
-  }
-})
+    }
+  },
+  {
+    timestamps: true
+  });
+
+  module.exports = mongoose.model('Celebrity', schema);
