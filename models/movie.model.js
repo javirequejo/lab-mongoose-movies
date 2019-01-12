@@ -13,6 +13,10 @@ const schema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  celebrity: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Celebrity'
+  }
 
 }, {
   timestamps: true
