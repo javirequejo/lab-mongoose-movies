@@ -2,8 +2,8 @@ const Celebrity = require('../models/celebrity.model');
 
 module.exports.list = (req, res, next) => {
   Celebrity.find()
-    .then((celebrities) => res.render('../models/celebrity.model', { celebrities }))
-    .cath(err => next(err)) 
+    .then((celebrities) => res.render('../views/celebrities/list.hbs', { celebrities }))
+    .catch(err => next(err)) 
     };
 
 module.exports.create = (req, res, next) => {

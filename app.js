@@ -19,6 +19,6 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials')
 app.use(express.static(__dirname + '/public'));
 
-app.use('celebrities', celebritiesRoutes);
+app.use('/celebrities', celebritiesRoutes);
 
 app.listen(PORT, () => console.info(`App listen at ${PORT} port`));
