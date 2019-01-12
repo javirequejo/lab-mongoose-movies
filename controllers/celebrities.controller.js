@@ -1,8 +1,8 @@
-const Celebrity = require('/models/celebrity.model');
+const Celebrity = require('../models/celebrity.model');
 
 module.exports.list = (req, res, next) => {
   Celebrity.find()
-    .then((celebrities) => res.render('celebrities/list', { celebrities }))
+    .then((celebrities) => res.render('../models/celebrity.model', { celebrities }))
     .cath(err => next(err)) 
     };
 
