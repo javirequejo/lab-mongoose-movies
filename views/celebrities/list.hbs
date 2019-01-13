@@ -1,8 +1,24 @@
 <a class="btn btn-primary" href="/celebrities/create">New Celebrity</a>
 
-<ul>
-  {{#each celebrities as |celebrity| }}
-    <li> {{ celebrity.name }}
-      <a href="/celebrities/{{ celebrity._id }}">View</a></li>
-  {{/each }}
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Occupation</th>
+      <th>CatchPhrase</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each celebrities as |celebrity| }}
+      <tr>
+        <td>
+          <a href="/celebrities/{{celebrity._id}}/edit">{{ celebrity.name }}</a>
+        </td>
+        <td>{{ celebrity.occupation }}</td>
+        <td>{{ celebrity.catchPhrase }}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a class="btn btn-primary mb-3" href="/">Back to home</a>

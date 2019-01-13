@@ -1,11 +1,11 @@
 <h1>{{ celebrity.name }}</h1>
   <ul>
-      <li>{{ celebrity.occupation}}</li> 
-      <li>{{celebrity.catchPhrase }}</li>
+      <li>Occupation: {{ celebrity.occupation}}</li> 
+      <li>Catch Phrase: {{celebrity.catchPhrase }}</li>
   </ul>
 
-<a href="/celebrities">Back to list</a>
-
 <form action="/celebrities/{{celebrity._id}}/delete" method="post">
-  <button type="submit">Delete</button>
+  <button type="submit">Delete celebrity</button>
 </form>
+
+<a class="btn btn-primary" href="/">Back to list</a>
