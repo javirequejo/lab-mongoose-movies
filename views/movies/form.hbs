@@ -1,7 +1,8 @@
 {{#if movie.isNew }}
-  <form action="/movies/create" method="post">
+  <form action="/movies/create" method="post" class="create-form">
+  <h1>Create a new Celebrity</h1>
 {{else}}
-  <form action="/movies/{{movie.id}}/edit" method="post">
+  <form action="/movies/{{movie.id}}/edit" method="post" class="create-form">
 {{/if}}
 
   <div class="form-group">
@@ -29,4 +30,5 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
+
 </form>

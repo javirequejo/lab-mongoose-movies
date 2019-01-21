@@ -1,8 +1,9 @@
 
-<div class="container-fluid">
-
+<div class="container-fluid index-container">
+<div class="movies-container">
+<div class="movies-subcontainer">
 <h2>Movies</h2>
-<table class="table">
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Title</th>
@@ -14,9 +15,7 @@
   <tbody>
     {{#each movies as |movie| }}
       <tr>
-        <td>
-          <a href="/movies/{{movie._id}}/edit">{{ movie.title }}</a>
-        </td>
+        <td><a href="/movies/{{movie._id}}/edit">{{ movie.title }}</a></td>
         <td>{{ movie.genre }}</td>
         <td>{{ movie.plot }}</td>
         <td>
@@ -24,12 +23,15 @@
         </td>
       </tr>
     {{/each}}
-    <a class="btn btn-primary mb-3" href="/movies/create">New Movie</a>
   </tbody>
 </table>
-
+<a class="btn btn-primary btn-block mb-3" href="/movies/create">New Movie</a>
+</div>
+</div>
+<div class="celebrities-container">
+<div class="celebrities-subcontainer">
 <h2>Celebrities</h2>
-<table class="table">
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -40,15 +42,16 @@
   <tbody>
     {{#each celebrities as |celebrity| }}
       <tr>
-        <td>
-          <a href="/celebrities/{{celebrity._id}}/">{{ celebrity.name }}</a>
-        </td>
-        <td>{{ celebrity.occupation }}</td>
-        <td>{{ celebrity.catchPhrase }}</td>
+            <td><a href="/celebrities/{{celebrity._id}}/">{{ celebrity.name }}</a></td>
+            <td>{{ celebrity.occupation }}</td>
+            <td>{{ celebrity.catchPhrase }}</td>
+          </a>
       </tr>
     {{/each}}
-    <a class="btn btn-primary" href="/celebrities/create">New Celebrity</a>
+    
   </tbody>
 </table>
-
+<a class="btn btn-primary btn-block mb-3" href="/celebrities/create">New Celebrity</a>
+</div>
+</div>
 </div>

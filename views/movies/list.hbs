@@ -1,6 +1,7 @@
-<a class="btn btn-primary mb-3" href="/movies/create">New Movie</a>
-
-<table class="table">
+<div class="movies-container">
+<div class="movies-subcontainer">
+<h2>Movies</h2>
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Title</th>
@@ -9,13 +10,10 @@
       <th>Celebrity</th>
     </tr>
   </thead>
-
   <tbody>
     {{#each movies as |movie| }}
       <tr>
-        <td>
-          <a href="/movies/{{movie._id}}/edit">{{ movie.title }}</a>
-        </td>
+        <td><a href="/movies/{{movie._id}}/edit">{{ movie.title }}</a></td>
         <td>{{ movie.genre }}</td>
         <td>{{ movie.plot }}</td>
         <td>
@@ -25,5 +23,8 @@
     {{/each}}
   </tbody>
 </table>
+<a class="btn btn-primary btn-block mb-3" href="/movies/create">New Movie</a>
+</div>
+</div>
 
 <a class="btn btn-primary mb-3" href="/">Back to home</a>

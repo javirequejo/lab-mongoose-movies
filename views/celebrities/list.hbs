@@ -1,6 +1,7 @@
-<a class="btn btn-primary" href="/celebrities/create">New Celebrity</a>
-
-<table class="table">
+<div class="celebrities-container">
+<div class="celebrities-subcontainer">
+<h2>Celebrities</h2>
+<table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -11,14 +12,17 @@
   <tbody>
     {{#each celebrities as |celebrity| }}
       <tr>
-        <td>
-          <a href="/celebrities/{{celebrity._id}}/edit">{{ celebrity.name }}</a>
-        </td>
-        <td>{{ celebrity.occupation }}</td>
-        <td>{{ celebrity.catchPhrase }}</td>
+            <td><a href="/celebrities/{{celebrity._id}}/">{{ celebrity.name }}</a></td>
+            <td>{{ celebrity.occupation }}</td>
+            <td>{{ celebrity.catchPhrase }}</td>
+          </a>
       </tr>
     {{/each}}
+    
   </tbody>
 </table>
+<a class="btn btn-primary btn-block mb-3" href="/celebrities/create">New Celebrity</a>
+</div>
+</div>
 
 <a class="btn btn-primary mb-3" href="/">Back to home</a>

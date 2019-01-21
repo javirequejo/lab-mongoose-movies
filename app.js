@@ -27,4 +27,4 @@ app.use('/', indexRoutes);
 app.use('/celebrities', celebritiesRoutes);
 app.use('/movies', moviesRoutes);
 
-app.listen(PORT, () => console.info(`App listen at ${PORT} port`));
+app.listen(PORT, () => console.info(`App liste  n at ${PORT} port`));
